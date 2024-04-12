@@ -12,11 +12,13 @@
   --primary: hsl(var(var(--hue), 90%, 55%));
   --primaryT: hsla(var(--hue), 90%, 55%, 0);
   --tranDur: 0.3s;
-  font-size: calc(16px + (32 - 16) * (100w - 320px) / (1200 - 320));
+  font-size: calc(16px + (32 - 16) * (100vw - 320px) / (1200 - 320));
 }
 
 html,
 body {
+  /* margin-block: 20px; */
+  /* margin-inline: 40px; */
   background-color: var(--bg);
 }
 
@@ -29,7 +31,7 @@ body {
   color: var(--fg);
   height: 100vh;
   display: grid;
-  place-items: center;
+  place-items: start;
 }
 
 /* Default */
@@ -86,7 +88,7 @@ body {
 
 .theme__icon-part ~ .theme__icon-part {
   background-color: hsl(0, 0%, 100%);
-  border-radius: 0.5em;
+  border-radius: 0.05em;
   box-shadow: none;
   top: 50%;
   left: calc(50% -0.05em);
@@ -236,4 +238,12 @@ body {
   .theme__toggle:focus-visible {
     box-shadow: 0 0 0 0.125em var(--primary);
   }
+}
+
+.text {
+  background-image: url("logo_trial.png");
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
