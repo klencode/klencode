@@ -69,3 +69,6 @@ while True:    # Main program loop. # This creates an infinite loop which will c
         secondToLastNumber = lastNumber
         lastNumber = nextNumber
         
+# TRY THIS:
+# Use different starting numbers than 0 and 1.
+# Create the next number by adding the previous three numbers instead of the previous two.
